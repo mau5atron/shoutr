@@ -6,8 +6,4 @@
 <% end %>
 
 <%# When iterating through instance variables, do not use = / it will show database information  %>
-<% @shouts.each do |shout| %>
-	<div>
-		<%= shout.body %>
-	</div>
-<% end %>
+<%= render @shouts %>
