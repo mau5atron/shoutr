@@ -5,7 +5,8 @@
 	<%= form.submit "Shout" %>
 <% end %>
 
-<%= @shouts.each do |shout| %>
+<%# When iterating through instance variables, do not use = / it will show database information  %>
+<% @shouts.each do |shout| %>
 	<div>
 		<%= shout.body %>
 	</div>
