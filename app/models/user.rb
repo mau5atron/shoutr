@@ -6,5 +6,5 @@ class User < ApplicationRecord
   # Association for users
   # each user has many shouts (like tweets)
   # dependent destroy - added to delete all shouts when
-  # user is deleted
+  # user is deletedr
 end

@@ -13,6 +13,7 @@ class ShoutsController < ApplicationController
 	def shout_params
 		{ content: content_from_params }
 	end
+
 	def content_from_params
 		case params[:shout][:content_type]
 			when "TextShout" then TextShout.new(text_shout_content_params)
