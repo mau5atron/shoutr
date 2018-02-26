@@ -3,4 +3,8 @@ class	Guest
 		
 	end
 	# just comment to make commit 
+
+	def liked?(_)
+		false
+	end
 end
