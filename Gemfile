@@ -27,6 +27,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Gem by thoughtbot to handle user authentication
 gem 'clearance' 
+gem 'paperclip'
 
 gem 'hirb'
 # Use Redis adapter to run Action Cable in production
