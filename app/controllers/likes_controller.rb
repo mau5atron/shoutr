@@ -1,4 +1,8 @@
 class LikesController < ApplicationController
+	before_filter :require_login
+	# before liking a shout
+	# user has to sign_in
+
 	def create
 		current_user.like(shout)
 		redirect_to root_path
