@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resource :session, only: [:create]
 
   resources :users, only: [:create, :show] do
+    resources :followers, only: [:index]
     # new addition to user member - follow button group
     member do 
       post "follow" => 'followed_users#create'
