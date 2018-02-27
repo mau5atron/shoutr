@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-	before_filter :require_login
+	before_action :require_login
 	# before liking a shout
 	# user has to sign_in
 
