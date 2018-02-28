@@ -1,32 +1,11 @@
 <h1>Dashboard</h1>
 
-<%= shout_form_for(TextShout) do %>
-	<%= content_form.text_field :body, placeholder: "Shout here!", required: true %>
+<%= shout_form_for(TextShout) do |form| %>
+	<%=	form.text_field :body, placeholder: "Shout here!", required: true %>
 <% end %>
 
-<%= shout_form_for(PhotoShout) do %>
-	<%= content_form.file_field :image, required: true %>
-<% end %>
-
-
-<%= form_for @shout do |form| %>
-	<%= form.hidden_field :content_type, value: "TextShout"  %>
-	<%= form.fields_for :content do |content_form| %>
-	
-
-
-	<% end %>
-	<%= form.submit "Shout" %>
-<% end %>
-
-<%= form_for @shout do |form| %>
-	<%= form.hidden_field :content_type, value: "PhotoShout"  %>
-	<%= form.fields_for :content do |content_form| %>
-		
-
-
-	<% end %>
-	<%= form.submit "Shout" %>
+<%= shout_form_for(PhotoShout) do |form| %>
+	<%= form.file_field :image, required: true %>
 <% end %>
 
 <%#= When iterating through instance variables, do not use = / it will show database information  %>
