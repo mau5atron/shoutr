@@ -11,4 +11,5 @@ class Shout < ApplicationRecord
   # makes it possible to just use username and not 
   # specify user object when calling username object 
   # attached to user 
+
 end
