@@ -5,6 +5,17 @@ Rails.application.routes.draw do
 
   # -----------------------------------
   root to: 'home#show'
+  # -----------------------------------
+
+  # -----------------------------------
+  resource :search, only:[:show]
+
+  # resource, not resources in order to have 
+  # a single path
+  # -----------------------------------
+
+
+  # -----------------------------------
   post "text_shouts" => 'shouts#create', defaults: { content_type: TextShout}
   # creates a text shout - cant be changed through form from default
   post "photo_shouts" => 'shouts#create', defaults: { content_type: PhotoShout}
