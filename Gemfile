@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'clearance' 
 gem 'paperclip'
 gem 'hirb'
+gem 'sunspot_rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -39,6 +40,8 @@ gem 'hirb'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'sunspot_solr'
+  # solr provides development instance that can be used
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
