@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post "text_shouts" => 'shouts#create', defaults: { content_type: TextShout}
   # creates a text shout - cant be changed through form from default
   post "photo_shouts" => 'shouts#create', defaults: { content_type: PhotoShout}
+  
   resources :shouts, only: [:create, :show] do
     member do
       post "like" => 'likes#create'
